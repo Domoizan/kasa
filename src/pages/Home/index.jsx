@@ -3,10 +3,11 @@ import Header from "../../components/Header";
 import Body from '../../components/Body'
 import Footer from "../../components/Footer";
 
-function Home() {
+function Home({mode=1}) {
+  console.log(`mode = ${mode}`)
   return (
     <div>
-        <Header />
+        <Header mode={mode}/>
         <Body />
         <Footer />
     </div>
