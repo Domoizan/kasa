@@ -1,0 +1,57 @@
+/*
+Configuration des variables
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* couleurs de font */
+$bg_red : #FF6060;
+$bg_grey : #F6F6F6;
+$bg_footer : #000;
+$bg_grey_transparent: #d3d3d32e;
+$bg_degrad: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, .3));
+$bg_transp_car: rgba(211, 211, 211, 0.2);
+$bg_transp_bandeau : rgba(0, 0, 0, 0.6);
+/* couleur de texte */
+
+$color_font_red : #FF6060;
+$color_font_white : #FFF;
+$color_font_default : #000;
+
+
+/* font utilisées */
+$lst_fonts: Montserrat,sans-serif;
+$size_font : 16px;
+
+/* breakpoint media query */
+$min-width_D : 768px;
+
+/*taille affichage */
+$show_max-width_D : 1240px;
+$show_max-width_M : 335px;
+/* taille photos */
+/* card */
+$card_img-width_D : 340px;
+$card_img-height_D : 340px;
+$card_img-width_M : 335px;
+$card_img-height_M : 255px;
+
+/* carrousel */
+
+$car_img-width_D : 1240px;
+$car_img-height_D : 415px;
+$car_img-width_M : 335px;
+$car_img-height_M : 255px;
+
+$car_lnk_width_M: 24px;
+$car_lnk_height_M: 24px;
+$car_lnk_width_D: 46px;
+$car_lnk_height_D: 79px;
+
+$car_lnk_top_D: 167px;
+$car_lnk_top_M: 100px;
+$car_lnk_left_D: 25px;
+$car_lnk_left_M: 10px;
+$car_lnk_rigth_D: 25px;
+$car_lnk_rigth_M: 10px;
+
+

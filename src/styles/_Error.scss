@@ -1,0 +1,43 @@
+.error{
+    display: flex;
+    flex-direction: column;
+    width: $show_max-width_M;
+    margin:auto;
+    gap:100px;
+    justify-content:center;
+    align-items: center;
+    padding-bottom: 100px;
+    @media(min-width : $min-width_D){
+        width: $show_max-width_D;
+    }
+
+    &__num{
+        color: $color_font_red;
+        font-size: 96px;
+        font-weight: 700;
+        @media(min-width : $min-width_D){
+            font-size: 250px;
+        }
+    }
+
+    &__lnk{
+        color: $color_font_default;
+        text-decoration: underline;
+        font-size: 14px;
+        font-weight: 500;
+        @media(min-width : $min-width_D){
+            font-size: 18px;
+        }
+    }
+
+    & h1 {
+        color: $color_font_red;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+        @media(min-width : $min-width_D){
+            font-size: 36px;
+        }
+    }
+
+}

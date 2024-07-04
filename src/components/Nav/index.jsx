@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 
 function Nav({mode}){
-    console.log(`mode = ${mode}`)
+    
     return (
         
         <div className="header__nav">

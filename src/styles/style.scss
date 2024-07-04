@@ -1,52 +1,34 @@
 
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import './config';
 @import './minireset.scss';
 
-@keyframes anim_img_back {
-    from{
-        opacity: 0;
-        transform: translateX(+1240px);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes anim_img_next {
-    from{
-        opacity: 0;
-        transform: translateX(-1240px);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
 
 @keyframes  anim_blk_close{ 
     from{
         opacity: 1;
-        transform: translateY(0px);
-        
+        transform: translateY(0px);  
     }
+
     to{
         opacity: 0;
         transform: translateY(-20px);
-        display: none;
+        //display: none;
+        height: 0px;
     }
 }
 
 
 @keyframes anim_blk { 
     from{
+        height: 0px;
         opacity: 0;
         transform: translateY(-20px);
     }
 
+
     to{
+        height: auto;
         opacity: 1;
         transform: translateY(0px);
     }
@@ -59,482 +41,42 @@
  }
 
  body{
-    color:#000000;
-    font-family: Montserrat,sans-serif;
-    font-size: 1rem;
+    color:$color_font_default;
+    font-family: $lst_fonts;
+    font-size: $size_font;
  }
 
 /*
 Styles block header 
 */
-
-.header{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 1240px;
-    margin: 50px auto;
-    align-items: center;
-
-    &__nav{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        gap:3em;
-        text-align: right;
-        font-family:Montserrat, sans-serif  ;
-        font-size: 1.5em;
-        line-height: 2em;
-        width: 310px;
-        &__lnk{
-            color:black;
-            font-weight: 500;
-            text-decoration: none;
-        }
-    
-        &__lnkActif{
-            color:black;
-            font-weight: 500;
-            text-decoration: underline;
-        }
-
-
-    }
-
-
-
-}
-
+@import './header';
 
 /*
 Styles block Body
 */
 
-.body-content{
-    margin: 50px auto;
-    width: 1240px;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-
-    &__bandeau{
-        background: url("../images/IMG.png") lightgray 50% / cover no-repeat;
-        height: 223px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 25px;
-        color:white;
-
-        &-bis{
-            background: url("../images/Image\ source\ 2.png") lightgray 50% / cover no-repeat;
-        }
-        
-        & div{
-            display: flex;
-            height: 223px;
-            width: 100%;
-            background-color: rgba($color: #000000, $alpha: 0.6);
-            justify-content: center;
-            align-items: center;
-            border-radius: 25px;
-        }
-    }
-
-    & h1{
-        
-        font-family:Montserrat, sans-serif  ;
-        font-size: 48px;
-        font-weight: 700;
-    }
-
-    &__galery{
-        color:#000000;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        background-color: #F6F6F6;
-        border-radius: 25px;
-        padding: 50px;
-        gap:50px;
-    }
-}
-
-/* style Cardthumb */
-
-.cardthumb{
-    position: relative;
-    width: 340px;
-    height: 340px;
-    
-    & img{
-        position: absolute;
-        top:0;
-        left: 0;
-        width: 340px;
-        height: 340px;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-
-    & h2{
-        width: 300px;
-        color:white;
-        position:absolute;
-        top:268px;
-        left: 20px;
-        font-size: 1.2em;
-    }
-}
+@import './body_home';
 
 /* Styles Footer */
 
-.footer-content{
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    width: 1240px;
-    justify-content: center;
-    align-items: center;
-    padding-top:50px;
-    font-size: 24px;
-    font-family: Montserrat, sans-serif;
-    color:white;
-    background-color: #000000;
-    //transition: transform scaleY(1) 300ms,      
-}
-
-
+@import './_footer';
 
 /* Styles Section valeurs */
-
-.sectvaleur{
-    margin: auto;
-    width: 1024px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap:30px;
-}
-
-.boxArticle{
-
-    &__header{
-        display:flex;
-        position: relative;
-        height: 52px;
-        flex-direction: row;
-        align-items: center;
-        padding:0 30px;
-        justify-content: space-between;
-        background-color: #ff6060;
-        border-radius: 5px;
-        color: #FFF;
-        font-family: Montserrat;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 700;
-
-        &__icone{
-            width: 32px;
-            height: 32px;
-            background: url("../images/arrow_open.png") no-repeat;
-            transform: rotate(180deg);
-            transition: transform 300ms;
-        }
-
-        &__open{
-            transform: rotate(0deg);
-        }
-
-        &__close{
-            transform: rotate(180deg);
-        }
-        z-index: 2;
-    }
-
-    &__content{
-        display: flex;
-        position: relative;
-        background-color: #F6F6F6;
-        font-family: Montserrat;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        padding: 20px;
-        overflow: hidden;
-        animation : anim_blk 500ms linear both;
-        z-index: 0;
-        &__hidden{
-            animation: anim_blk_close 500ms linear both;
-        }
-    }
-
-   
-
-
-
-
-}
+@import './boxArticle';
 
 /*Styles Fiche logement*/
 
-.carrousel{
-    display: flex;
-    margin: auto;
-    position: relative;
-    width: 1240px;
-    height: 415px;
-    //background: url(https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg) lightgray 50% / cover no-repeat;
-
-
-
-
-    &__img{
-        width: 1240px;
-        object-fit: cover;
-        top:0;
-        left:0;
-    }
-
-    &__next{
-        animation: anim_img_next 1s linear both;
-    }
-    &__back{
-        animation: anim_img_back 1s linear both;
-    }
-
-
-    &__lnk{
-        width: 46px;
-        height: 79px;
-        object-fit: cover;
-        position: absolute;
-        z-index: 1;
-    }
-
-    &__lnkback{
-        @extend .carrousel__lnk;
-        top:167px;
-        left:25px;
-        z-index: 1;
-    }
-
-    &__lnknext{
-        @extend .carrousel__lnk;
-        top:167px;
-        right:25px;
-        z-index: 1;
-    }
-
-    &__nbImg{
-        position:absolute;
-        bottom:10px;
-        width: 1240px;
-        text-align: center;
-        color:white;
-        font-size: 18px;
-        z-index: 1;
-    }
-}
+@import './carrousel';
 
 
 
 /* Fiche logement identité */
 
-.host{
-    display:flex;
-    flex-direction: row;
-    width: 250px;
-    align-items: center;
-    justify-content: end;
-    gap:5px;
-    &__ident{
-        display: flex;
-        flex-direction: column;
-        color: #FF6060;
-        text-align: right;
-        font-family: Montserrat;
-        font-size: 18px;
-    }
-    & p{
-        display: flex;
-        margin: 0;
-    }
+@import './fich_logt';
 
-    & img{
-        width: 64px;
-        height: 64px;
-        border-radius: 50%;
-    }
-}
-
-.tags{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap:10px;
-    margin-top: 30px;;
-
-    &__item{
-        min-width: 115px;
-        height: 25px;
-        padding: 5px 15px 0 15px ;
-        text-align: center;
-        background-color: #FF6060;
-        border-radius: 10px;
-        color:white;
-        font-family: Montserrat;
-        font-size: 14px;
-        font-weight: 700;
-        vertical-align: middle;
-    }
-}
-
-.rating{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-.logt{
-    width: 1240px;
-    margin: auto;
-}
-
-.location{
-    display: flex;
-    flex-direction: row;
-    width: 1240px;
-    margin: 25px auto;
-    gap:30px;
-    
-    justify-content: space-between;
-
-    &__host{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
-    }
-    
-    & h1{
-        color: #FF6060;
-        //font-family: Montserrat;
-        font-size: 36px;
-        //font-style: normal;
-        font-weight: 500;
-    }
-
-    & h2{
-        color: #000;
-        font-size: 18px;
-        font-weight: 500;
-    }
-}
-
-.detail{
-    width: 1240px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap:30px;
-    margin:50px auto;
-    font-family: Montserrat, sans-serif;
-}
-
-.description{
-    width: 520px;
-    font-family: Montserrat;
-    &__titre{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        color:white;
-        background-color: #FF6060;
-        border-radius: 10px;
-        height: 2em;
-        padding: 0 15px;
-        font-size: 18px;
-        font-weight: 700;
-
-        & img{
-            width: 24px ;
-            height: 14px;
-        }
-
-        & img:hover{
-            cursor: pointer;
-        }
-    }
-    
-    &__content{
-        display:block;
-        background-color: #F6F6F6;
-        padding-left: 15px;
-    }
-}
-
-.equipement{
-    width: 520px;
-    &__titre{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        color:white;
-        background-color: #FF6060;
-        border-radius: 10px;
-        padding: 0 15px;
-        height: 2em;      
-        font-size: 18px;
-        font-weight: 700;
-    }
-
-    & img{
-        width: 24px ;
-        height: 14px;
-    }
-
-    & img:hover{
-        cursor: pointer;
-    }
-
-    &__content{
-        display: block;
-        background-color: #F6F6F6;
-        padding-left: 15px;
-    }
-
-
-}
 
 .hidden{
     display: none;
 }
 
-.error{
-    display: flex;
-    flex-direction: column;
-    width: 1240px;
-    height: 80vh;
-    justify-content:space-around;
-    align-items: center;
-
-    &__lnk{
-        color: #000;
-        text-decoration: underline;
-        font-size: 18px;
-        font-weight: 500;
-    }
-
-    & h1 {
-        color: #FF6060;
-        font-size: 36px;
-
-font-weight: 500;
-    }
-
-}
+@import './Error';
