@@ -1,0 +1,231 @@
+.logt{
+    width: $show_max-width_M;
+    margin: auto;
+    @media(min-width : $min-width_D){
+        width: $show_max-width_D;
+    }
+}
+
+.host{
+    display:flex;
+    flex-direction: row;
+    width: 250px;
+    align-items: center;
+    justify-content: end;
+    gap:5px;
+    @media(min-width : $min-width_D){
+        flex-direction: row;
+    }
+
+    &__ident{
+        display: flex;
+        flex-direction: column;
+        color: $color_font_red;
+        text-align: right;
+        font-size: 12px;
+        @media(min-width : $min-width_D){
+            font-size: 18px;
+            flex-direction: column;
+        }
+    }
+    & p{
+        display: flex;
+        margin: 0;
+    }
+
+    & img{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        @media(min-width : $min-width_D){
+            width: 64px;
+            height: 64px;
+        }
+    }
+}
+
+.tags{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap:10px;
+    margin-top: 30px;
+
+    &__item{
+        min-width: 84px;
+        height: 18px;
+        padding: 2px 15px 0 15px ;
+        text-align: center;
+        background-color: $bg_red;
+        border-radius: 10px;
+        color:$color_font_white;
+        font-size: 10px;
+        font-weight: 700;
+        vertical-align: middle;
+        @media(min-width : $min-width_D){
+            min-width: 115px;
+            height: 30px;
+            font-size: 14px;
+            padding: 5px 15px 0 15px ;
+        }
+    }
+}
+
+.rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 98px;
+    height: 18px;
+    @media(min-width : $min-width_D){
+        width: 196px;
+        height: 36px;
+        justify-content: flex-end;
+    }
+    & img{
+        height: 14px;
+        width: 14px;
+        @media(min-width : $min-width_D){
+            height: 28px;
+            width: 28px;
+        }
+    }
+ 
+
+}
+
+
+
+.location{
+    display: flex;
+    flex-direction: column;
+    width: $show_max-width_M;
+    gap:1em;
+    justify-content:center;
+    margin: 15px auto;
+    @media(min-width : $min-width_D){
+        flex-direction: row;
+        width: $show_max-width_D;
+        margin: 25px auto;
+        justify-content:space-between;
+    }
+
+    &__host{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content:space-between;
+        align-items:center;
+        @media(min-width : $min-width_D){
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+        }
+    }
+    
+    & h1{
+        color: $color_font_red;
+        font-size: 18px;
+        font-weight: 500;
+        @media(min-width : $min-width_D){
+            font-size: 36px;
+        }
+    }
+
+    & h2{
+        color: $color_font_default;
+        font-size: 14px;
+        font-weight: 500;
+        @media(min-width : $min-width_D){
+            font-size: 18px;
+        }
+
+    }
+}
+
+.details{
+    width: $show_max-width_M;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:30px 0;
+    gap:30px;
+    @media(min-width : $min-width_D){
+        width: $show_max-width_D;
+        flex-direction: row;
+        margin:50px auto;
+        gap:70px;
+    }
+}
+
+.detail{
+    display: flex;
+    flex-direction: column;
+    width: $show_max-width_M;
+    @media(min-width : $min-width_D){
+        width: calc(calc($show_max-width_D - 70px)/2);//585px;
+    }
+    
+    &__header{
+        display: flex;
+        flex-direction: row;
+        width: $show_max-width_M;
+        height: 30px;
+        justify-content: space-between;
+        align-items: center;
+        color:white;
+        background-color: $bg_red;
+        border-radius: 5px;
+        padding: 0 15px;
+        font-size: 13px;
+        font-weight: 700;
+        z-index: 2;
+        @media(min-width : $min-width_D){
+            width: calc(calc($show_max-width_D - 70px)/2);
+            height: 52px;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+        &__icone{
+            width: 32px;
+            height: 32px;
+            background: url("../images/arrow_open.png") no-repeat;
+            transform: rotate(180deg);
+            transition: transform 300ms;
+        }
+
+        &__open{
+            transform: rotate(0deg);
+        }
+
+        &__close{
+            transform: rotate(180deg);
+        }
+
+        &__icone:hover{
+            cursor: pointer;
+        }
+    }
+
+    
+    &__content{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        background-color: $bg_grey;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        padding: 10px;
+        overflow: hidden;
+        animation : anim_blk 500ms linear both;
+        z-index: 0;
+        &__hidden{
+            animation: anim_blk_close 500ms linear both;
+        }
+        @media(min-width : $min-width_D){
+            font-size: 18px;
+            padding: 20px;
+        }
+    }
+}

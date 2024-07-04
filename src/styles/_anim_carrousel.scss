@@ -1,0 +1,78 @@
+/*
+Animations mobile
+*/
+
+@keyframes M_anim_LRTB{
+    from{
+        transform : translate(-$car_img-width_M,-$car_img-height_M);
+    }
+    to{
+        transform : translate(0px,0px);
+    }
+}
+    
+@keyframes M_anim_LRBT{
+    from{
+        transform : translate(-$car_img-width_M,+$car_img-height_M);
+    }
+    to{
+        transform : translate(0px,0px);
+    }
+}
+
+@keyframes M_anim_RLTB{
+    from{
+        transform : translate(+$car_img-width_M,+$car_img-height_M);
+    }
+    to{
+        transform : translate(0px,0px);
+    }
+}
+
+@keyframes M_anim_RLBT{
+    from{
+        transform : translate(+$car_img-width_M,-$car_img-height_M);
+    }
+    to{
+        transform : translate(0px,0px);
+    }
+}
+
+/*
+animations Descktop
+*/
+@keyframes D_anim_LRTB{
+    from{
+        transform : translate(-$car_img-width_D,-$car_img_height_D);
+    }
+    to{
+        transform : translate(0px,0px);
+    }
+}
+    
+@keyframes D_anim_LRBT{
+    from{
+        transform : translate(-$car_img-width_D,+$car_img_height_D);
+    }
+    to{
+        transform : translate(0px,0px);
+    }
+}
+
+@keyframes D_anim_RLTB{
+    from{
+        transform : translate(+$car_img-width_D,+$car_img_height_D);
+    }
+    to{
+        transform : translate(0px,0px);
+    }
+}
+
+@keyframes D_anim_RLBT{
+    from{
+        transform : translate(+$car_img-width_D,-$car_img_height_D);
+    }
+    to{
+        transform : translate(0px,0px);
+    }
+}

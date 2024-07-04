@@ -1,0 +1,27 @@
+.footer-content{
+    display: flex;
+    background-color: $bg_footer; 
+    color:$color_font_white;
+    min-width: 375px;
+    padding: 66px 120px 58px 120px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    @media(min-width : $min-width_D){
+        font-size: 24px;
+        gap:2em;
+    }
+    
+    & img{
+        width: 122px;
+    }
+
+    & p{
+        width: 100px;
+        @media(min-width : $min-width_D){
+            width: auto;
+        }
+    }
+}
