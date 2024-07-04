@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Rating from '../Rating'
 import HostCard from '../HostCard'
 import Tags from '../Tags'
@@ -20,5 +21,11 @@ return (
     </div>
 )
 }
+
+
+Logtinfo.propTypes = {
+    infoLogt:PropTypes.object.isRequired,
+}
+
 
 export default Logtinfo

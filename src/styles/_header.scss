@@ -1,0 +1,57 @@
+/*
+Styles header
+*/
+
+.header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    min-width: $show_max-width_M;
+    margin: 20px auto;
+
+    @media(min-width : $min-width_D){
+        width: $show_max-width_D;
+        margin: 50px auto;
+        align-items: center;
+    }
+
+    &__nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap:1.5em;
+        text-align: right;
+        font-size: 1em;
+        line-height: 1.5em;
+        width: 190px;
+
+        @media(min-width : $min-width_D){
+            width: 310px;
+            gap:3em;
+            font-size: 1.5em;
+            line-height: 2em;
+        }
+        
+        &__lnk{
+            color:$color_font_default;
+            font-weight: 500;
+            text-decoration: none;
+        }
+    
+        &__lnkActif{
+            color:$color_font_default;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+    }
+
+    &__logo{
+        width: 145px;
+        @media(min-width : $min-width_D){
+            width: 210px;
+        }
+    }
+
+}

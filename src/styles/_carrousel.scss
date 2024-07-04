@@ -1,0 +1,125 @@
+
+@import './anim_carrousel';
+
+.carrousel{
+    display: flex;
+    margin: auto;
+    position: relative;
+    width: $car_img-width_M;
+    height: $car_img-height_M;
+    overflow: hidden;
+    @media(min-width : $min-width_D){
+        width: $car_img-width_D;
+        height: $car_img-height_D;
+    }
+
+
+    &__div{
+        position: absolute;
+        top:0px;
+        left: 0px;
+        z-index: 2;
+        width: $car_img-width_M;
+        height: $card_img-height_M;
+        background: $bg_grey_transparent ;
+        @media(min-width : $min-width_D){
+            width: $car_img-width_D;
+            height: $car_img-height_D;
+        }
+    }
+
+
+    &__img{
+        width: $car_img-width_M;
+        height: $card_img-height_M;
+        object-fit: cover;
+        top:0;
+        left:0;
+        z-index: 1;
+        @media(min-width : $min-width_D){
+            width: $car_img-width_D;
+            height: $car_img-height_D;
+        }
+    }
+
+    &__nextlrtb{
+        @extend .carrousel__img;
+        animation: M_anim_LRTB 1s linear both;
+        @media(min-width : $min-width_D){
+            animation: D_anim_LRTB 1s linear both;
+        }
+    }
+
+    &__nextlrbt{
+        @extend .carrousel__img;
+        animation: M_anim_LRBT 1s linear both;
+        @media(min-width : $min-width_D){
+            animation: D_anim_LRBT 1s linear both;
+        }
+    }
+
+    &__backrltb{
+        @extend .carrousel__img;
+        animation: M_anim_RLTB 1s linear both;
+        @media(min-width : $min-width_D){
+            animation: D_anim_RLTB 1s linear both;
+        }
+    }
+
+    &__backrlbt{
+        @extend .carrousel__img;
+        animation: M_anim_RLBT 1s linear both;
+        @media(min-width : $min-width_D){
+            animation: D_anim_RLBT 1s linear both;  
+        }
+    }
+
+
+    &__lnk{
+        width: $car_lnk_width_M;
+        height: $car_lnk_height_M;
+        object-fit: cover;
+        position: absolute;
+        //z-index: 1;
+        @media(min-width : $min-width_D){
+            width: $car_lnk_width_D;
+            height: $car_lnk_height_D;
+        }
+
+    }
+
+    &__lnkback{
+        @extend .carrousel__lnk;
+        top:$car_lnk_top_M;
+        left:$car_lnk_left_M;
+        @media(min-width : $min-width_D){
+            top:$car_lnk_top_D;
+            left:$car_lnk_left_D;
+        }
+    }
+
+    &__lnknext{
+        @extend .carrousel__lnk;
+        top:$car_lnk_top_M;
+        right:$car_lnk_rigth_M;
+        @media(min-width : $min-width_D){
+            top:$car_lnk_top_D;
+            right:$car_lnk_rigth_D;
+        }
+
+    }
+
+    &__nbImg{
+        position:absolute;
+        bottom:10px;
+        width: $car_img-width_M;
+        text-align: center;
+        color:$color_font_white;
+        font-size: 18px;
+        z-index: 1;
+        @media(min-width : $min-width_D){
+            width: $car_img-width_D;
+        }
+        
+    }
+}

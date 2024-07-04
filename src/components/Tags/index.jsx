@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 function Tags({tags}){
 const content=[]
 
@@ -12,6 +14,10 @@ return (
         {content}
     </div>
 )
+}
+
+Tags.propTypes={
+    tags : PropTypes.arrayOf(PropTypes.string)
 }
 
 export default Tags

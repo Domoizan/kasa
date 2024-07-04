@@ -1,0 +1,83 @@
+.sectvaleur{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: $show_max-width_M;
+    gap:10px;
+    @media(min-width : $min-width_D){
+        width: calc($show_max-width_D * 0.82);
+        gap:30px;
+    }
+}
+
+.boxArticle{
+    &__header{
+        display:flex;
+        position: relative;
+        height: 30px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding:0 30px;
+        background-color: $bg_red;
+        border-radius: 5px;
+
+        @media(min-width : $min-width_D){
+            height: 52px;
+            font-size: 24px;
+        }
+
+        & h2{
+            color: $color_font_white;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 700;
+            @media(min-width : $min-width_D){
+                padding-top: 10px;
+                height: 52px;
+                font-size: 24px;
+            }
+        }
+
+
+
+        &__icone{
+            width: 32px;
+            height: 32px;
+            background: url("../images/arrow_open.png") no-repeat;
+            transform: rotate(180deg);
+            transition: transform 300ms;
+  
+        }
+
+        &__open{
+            transform: rotate(0deg);
+        }
+
+        &__close{
+            transform: rotate(180deg);
+        }
+        z-index: 2;
+    }
+
+    &__content{
+        display: flex;
+        position: relative;
+        background-color: $bg_grey;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        padding: 20px;
+        overflow: hidden;
+        animation : anim_blk 500ms linear both;
+        z-index: 0;
+        &__hidden{
+            animation: anim_blk_close 500ms linear both;
+        }
+        @media(min-width : $min-width_D){
+            font-size: 18px;
+        }
+    }
+
+}

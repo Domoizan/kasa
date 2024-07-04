@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import starRed from '../../images/starRed.svg'
 import starGrey from '../../images/starGrey.svg'
 
@@ -15,11 +16,18 @@ function Rating({rating}){
             ) 
         }
     }
+    
     return (
         <div className='rating'>
         {content}
         </div>
     )
 }
+
+Rating.propTypes={
+    rating:PropTypes.string.isRequired,
+}
+
+
 
 export default Rating
