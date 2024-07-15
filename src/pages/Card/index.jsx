@@ -9,7 +9,8 @@ import Error from "../../components/Error"
 function Card(){
     const {logementid}= useParams()
     const infoLogt = data.find((logt)=> logt.id === logementid)
-    const content = (infoLogt===undefined)?<Error />:<Logt /> 
+
+    const content = (infoLogt===undefined)?<Error /> : <Logt />;
 
     return (
         <>

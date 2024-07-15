@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import ImgError from '../../images/404.png'
+
 
 function Error(){
 return(
