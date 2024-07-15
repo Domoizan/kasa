@@ -1,15 +1,12 @@
-import { Link } from "react-router-dom"
+import {  NavLink } from "react-router-dom"
 
 
-
-
-function Nav({mode}){
-    
+function Nav(){
     return (
         
         <div className="header__nav">
-        <Link to="/" className={(mode===1)?'header__nav__lnkActif':'header__nav__lnk'} >Accueil</Link>
-        <Link to="/Apropos" className={(mode===2)?'header__nav__lnkActif':'header__nav__lnk'}>A propos</Link>
+            <NavLink to="/" className={({isActive}) => isActive ? "header__nav__lnkActif" : "header__nav__lnk"} >Accueil</NavLink>
+            <NavLink to="/Apropos" className={({isActive}) => isActive ? "header__nav__lnkActif" : "header__nav__lnk"}>A propos</NavLink>
         </div>
     )
 }
