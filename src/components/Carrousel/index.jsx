@@ -27,23 +27,23 @@ function Carroussel({pictures}){
         
     }
     const picture=pictures[idxphoto]
-    let Class=""
+    let Content=""
 
     switch (transition){
         case NEXT_X :
-            Class=<img className='carrousel__nextlrtb' src={`${picture}`} alt="logement"/>
+            Content=<img className='carrousel__nextlrtb' src={`${picture}`} alt="logement"/>
             break;
         case NEXT_Y :
-            Class=<img className='carrousel__nextlrbt' src={`${picture}`}  alt="logement"/>
+            Content=<img className='carrousel__nextlrbt' src={`${picture}`}  alt="logement"/>
             break;
         case BACK_X :
-            Class=<img className='carrousel__backrltb' src={`${picture}`}  alt="logement"/>
+            Content=<img className='carrousel__backrltb' src={`${picture}`}  alt="logement"/>
             break;
         case BACK_Y : 
-            Class=<img className='carrousel__backrlbt' src={`${picture}`}  alt="logement"/>
+            Content=<img className='carrousel__backrlbt' src={`${picture}`}  alt="logement"/>
             break;        
         default:
-            Class=<img className='carrousel__img' src={`${picture}`} alt="logement"/>
+            Content=<img className='carrousel__img' src={`${picture}`} alt="logement"/>
             break;
     }
 
@@ -56,7 +56,7 @@ function Carroussel({pictures}){
                 {(nbPhtoto > 1)?<div className='carrousel__lnknext' onClick={incIndex}><img src={nextImg} alt='suivante' /></div>:null}
                 <p className='carrousel__nbImg'>{(nbPhtoto>1)?`${cur_photo+1}/${nbPhtoto}`:null}</p>
             </div>
-            {Class}
+            {Content}
             
         </div>
     )
